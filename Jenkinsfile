@@ -2,10 +2,9 @@ pipeline {
 	agent any  
 
 	stages {
-		stage('NPM Build') {
+		stage('Build Docker') {
 			steps {
-				bat 'npm install'
-				bat 'npm start'
+				bat 'docker compose up'
 			}
 		}
 	}
